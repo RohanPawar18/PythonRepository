@@ -14,5 +14,25 @@ print(s[-3:-1])
 l1 = [True,10,"uhkgxd"]
 print(l1)
 
+# ////////// List MUTABLE property///////////
 l2 = [[2,[37]],4,["abc"]]
-print(l2)
+l3=l2
+l2[1]=5
+print("List 2:  ",l2,"\nList 3:  ",l3)
+
+#////// To make copy of list use full slice//////////
+l3 = l2[:]
+l2[1]=4
+print("List 2:  ",l2,"\nList 3:  ",l3) 
+
+#///////////// Equality
+l2 = l3[:]
+l2[1] = 10
+if(l2 is l3) :
+    print("Same list")
+else:
+    print("Different lists")
+
+#//////////////// List concatenation////////
+l4 = l2+l3
+print("New list l4= ",l4)
